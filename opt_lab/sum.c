@@ -71,9 +71,6 @@
 
     int main()
     {
-        printf("%d \n", MAX_NUM);
-        printf("This is the naive version .. \n");
-
         vec_t info; 
         data_t result; 
 
@@ -81,8 +78,8 @@
         init(&info);
 
         // combine 
-       // combine(&info, &result);
-       // printf("combined val = %f\n", result);
+       combine(&info, &result);
+       printf("combined val = %f\n", result);
 
         // cleanup 
         cleanup(&info);

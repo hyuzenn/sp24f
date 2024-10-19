@@ -1,0 +1,18 @@
+combined val = 45.000000
+# DURATION     TID     FUNCTION
+   0.255 us [  1212] | __monstartup();
+   0.107 us [  1212] | __cxa_atexit();
+            [  1212] | main() {
+            [  1212] |   init() {
+   0.103 us [  1212] |     malloc();
+   0.423 us [  1212] |   } /* init */
+            [  1212] |   combine() {
+   0.044 us [  1212] |     vec_length();
+   0.243 us [  1212] |   } /* combine */
+            [  1212] |   printf() {
+ 746.269 us [  1212] |     /* linux:schedule */
+ 780.653 us [  1212] |   } /* printf */
+            [  1212] |   cleanup() {
+   0.195 us [  1212] |     free();
+   0.555 us [  1212] |   } /* cleanup */
+ 782.798 us [  1212] | } /* main */

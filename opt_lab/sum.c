@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <limits.h>
 
-#define MAX_NUM 1000000
+//#define MAX_NUM 10
+#define MAX_NUM 100000000
+#define UNROLL_FACTOR 4
 
 typedef double data_t;
 
@@ -12,57 +15,75 @@ struct vec {
 };
 typedef struct vec vec_t;
 
-int vec_length(vec_t* v) {
+int get_vec_element(vec_t* v, int idx, data_t *val)
+{
+    assert(v);
+
+    if (idx >= v->len)
+        return 0;
+
+    *val = v->data[idx];
+    return 1;
+}
+
+int vec_length(vec_t* v)
+{
     assert(v);
     return v->len;
 }
 
 void combine(vec_t* v, data_t *dest) {
-    assert(v);  // v가 NULL인지 확인
     assert(dest);
     *dest = 0;
-    int len = vec_length(v);
-    
-    // Loop unrolling by 2
-    for (int i = 0; i < len; i += 2) {
-        if (i < len) {
-            *dest += v->data[i]; // 첫 번째 요소
-        }
-        if (i + 1 < len) {
-            *dest += v->data[i + 1]; // 두 번째 요소
-        }
+    int len = vec_length(v); 
+    for (int i = 0; i < len; i += UNROLL_FACTOR) {
+        *dest += v->data[i];
+        if (i + 1 < len) *dest += v->data[i + 1];
+        if (i + 2 < len) *dest += v->data[i + 2];
+        if (i + 3 < len) *dest += v->data[i + 3];
     }
 }
 
-
-void init(vec_t* v) {
+void init(vec_t* v)
+{
     assert(v);
     v->len = MAX_NUM;
     v->data = (data_t*) malloc(sizeof(data_t) * MAX_NUM);
     
-    // 메모리 할당 성공 여부 확인
-    assert(v->data != NULL);
+    // Check if malloc succeeded
+    if (v->data == NULL) {
+        fprintf(stderr, "Error: Memory allocation failed!\n");
+        exit(EXIT_FAILURE);  // Exit if malloc fails
+    }
 
-    // init
+    // init 
     for (int i = 0; i < MAX_NUM; i++)
-        v->data[i] = (data_t)i;
+        v->data[i] = i;
 }
 
-int main() {
-    printf("This is the naive version .. 1 \n");
+void cleanup(vec_t* v) {
+    assert(v);
+    free(v->data);
+    v->data = NULL; // Prevent dangling pointer
+}
 
-    vec_t info;
-    data_t result;
+int main()
+{
+    printf("This is the naive version .. \n");
+    printf("%d \n", MAX_NUM);
+
+    vec_t info; 
+    data_t result; 
 
     // init 
     init(&info);
 
     // combine 
     combine(&info, &result);
-    printf("Combined value = %f\n", result); // 결과 출력
+    printf("combined val = %f\n", result);
 
-    // 메모리 해제
-    free(info.data);
+    // cleanup 
+    cleanup(&info);
 
     return 0;
 }

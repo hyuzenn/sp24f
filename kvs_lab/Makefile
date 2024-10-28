@@ -10,9 +10,10 @@ LIBS = -L. -lkvs
 OBJS = $(SRCS:.c=.o)
 LOBJS = $(LIBSRCS:.c=.o)
 LARS = libkvs.a
+LDSHARED = libkvs.so
 
 
-all: 
+all: static dynamic
 
 static: $(TARG)
 
@@ -22,13 +23,16 @@ $(TARG) : $(OBJS) $(LARS)
 $(LARS) : $(LOBJS)
 	ar rs $(LARS) $(LOBJS)
 
+dynamic: $(TARG_DYNAMIC)
+
+$(TARG_DYNAMIC): $(OBJS) $(LDSHARED)
+	$(CC) -o $(TARG_DYNAMIC) $(OBJS) $(LIBS)
+
+$(LDSHARED): $(LOBJS)
+	$(CC) -shared -o $(LDSHARED) $(LOBJS)
+
 %.o: %.c
 	$(CC) $(OPTS) -c $< -o $@
 
-dynamic: $(TARG_DYNAMIC)
-	$(CC) -o $(TARG) $(OBJS) $(LIBS) 
-
 clean:
-	rm -f $(OBJS) $(LOBJS) $(LARS) $(TARG)
-
-
+	rm -f $(OBJS) $(LOBJS) $(LARS) $(LDSHARED) $(TARG) $(TARG_DYNAMIC)

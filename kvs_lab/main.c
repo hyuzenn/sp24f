@@ -2,7 +2,8 @@
 
 int main()
 {
-	kvs_t* kvs = open();
+	kvs_t* my_kvs = open_kvs();
+
 
 	if(!kvs) {
 		printf("Failed to open kvs\n");
@@ -17,7 +18,7 @@ int main()
 	//		Return -1 if the key is not found  
 
 
-	close(kvs);
+	close_kvs(my_kvs);
 	
 	return 0;
 }

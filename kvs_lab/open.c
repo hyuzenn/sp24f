@@ -6,5 +6,8 @@ kvs_t* open_kvs() {
     kvs->level = 0;
     kvs->items = 0;
     srand(time(NULL)); // 랜덤 시드 초기화
+
+		printf("Open: kvs has %d items\n", kvs->items);
+		
     return kvs;
 }

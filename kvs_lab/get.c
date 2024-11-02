@@ -35,5 +35,5 @@ char* get(kvs_t* kvs, const char* key) {
     }
 
     // 키가 존재하지 않으면 NULL 반환
-    return NULL;
+    return NULL; // 키가 존재하지 않음
 }

@@ -4,7 +4,8 @@
 
 int kvs_close(kvs_t* kvs) // 수정된 부분
 {
-    if (kvs == NULL) return -1;
+    if (kvs == NULL)
+        return -1;
     node_t *current = kvs->list->header;
     while (current) {
         node_t *next = current->forward[0];

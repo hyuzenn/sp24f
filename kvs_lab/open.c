@@ -1,20 +1,21 @@
-#include <stdio.h>
 #include "kvs.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-kvs_t* open() {
-		kvs_t* kvs = (kvs_t*)malloc(sizeof(kvs_t));
-	if (kvs == NULL) {
-			fprintf(stderr, "Memory allocation failed\n");
-			return NULL; // 메모리 할당 실패 시 NULL 반환
-	}
+kvs_t* open_kvs() {
+    kvs_t* kvs = (kvs_t*)malloc(sizeof(kvs_t));
+    
+    if (!kvs) {
+        fprintf(stderr, "Error: Failed to allocate memory for kvs\n");
+        return NULL;
+    }
 
-    kvs->header = create_node(MAX_LEVEL, "", ""); // 헤더 노드 생성
-    kvs->level = 0;
-    kvs->items = 0;
-    srand(time(NULL)); // 랜덤 시드 초기화
-
-    printf("Open: kvs has %d items\n", kvs->items);
-    fflush(stdout); // 출력 버퍼를 비웁니다.
+    kvs->list = createSkiplist();
+    if (!kvs->list) {
+        free(kvs);
+        fprintf(stderr, "Error: Failed to create skiplist\n");
+        return NULL;
+    }
 
     return kvs;
 }

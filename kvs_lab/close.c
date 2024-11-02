@@ -1,14 +1,20 @@
 #include "kvs.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-int close_kvs(kvs_t* kvs) {
-    node_t* current = kvs->header->forward[0];
-    while (current != NULL) {
-        node_t* next = current->forward[0];
+int kvs_close(kvs_t* kvs) // 수정된 부분
+{
+    if (kvs == NULL) return -1;
+    node_t *current = kvs->list->header;
+    while (current) {
+        node_t *next = current->forward[0];
         free(current->value);
-        free(current);
+        current->value = NULL;
+        free(current->forward);
+        free(current); 
         current = next;
     }
-    free(kvs->header);
     free(kvs);
+    kvs = NULL; // 포인터를 NULL로 설정해도 상위 변수에는 영향을 미치지 않음
     return 0;
 }

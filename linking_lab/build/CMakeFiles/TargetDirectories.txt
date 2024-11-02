@@ -1,0 +1,3 @@
+/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/build/CMakeFiles/leveldb_bench.dir
+/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/build/CMakeFiles/rebuild_cache.dir

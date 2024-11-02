@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.o -o leveldb_bench  -lleveldb 

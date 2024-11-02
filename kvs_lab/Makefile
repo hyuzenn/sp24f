@@ -3,6 +3,7 @@ LIBSRCS = open.c close.c put.c get.c skiplist.c
 TARG = kvs_static
 TARG_DYNAMIC = kvs_dynamic
 OBJ_FILES = main.o open.o close.o put.o get.o skiplist.o
+CFLAGS = -Wall -g -Wno-unused-but-set-variable
 
 CC = gcc
 OPTS = -Wall -g
@@ -10,7 +11,7 @@ LIBS = -L. -lkvs
 
 OBJS = $(SRCS:.c=.o)
 LOBJS = $(LIBSRCS:.c=.o)
-LOBJS_PIC = $(LIBSRCS:.c=_pic.o)
+LOBJS_PIC = $(LIBSRCS:.c=_pic.o)  # PIC 파일 목록
 LARS = libkvs.a
 LADYN = libkvs.so
 
@@ -45,7 +46,6 @@ $(LADYN): $(LOBJS_PIC)
 	$(CC) $(OPTS) -fPIC -c $< -o $@
 
 # 각 소스 파일을 개별적으로 컴파일하는 규칙 추가
-# 이 부분을 수정합니다.
 open_pic.o: open.c
 	$(CC) $(OPTS) -fPIC -c $< -o $@
 

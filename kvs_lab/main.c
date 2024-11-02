@@ -8,30 +8,25 @@ int main()
 	FILE *queryFile = fopen("query.dat", "r");
   FILE *answerFile = fopen("answer.dat", "w");
 
-	char buffer[1000]; 
 	kvs_t* my_kvs = open_kvs();
 	if (!my_kvs) {
 			printf("Error: Failed to open KVS. \n");
 			return 1; 
 	}
 
-	    while (fgets(buffer, sizeof(buffer), queryFile)) {
-        char *command = strtok(buffer, ","); 
-        char *key = strtok(NULL, ","); 
-        char *value = strtok(NULL, "\n"); 
-
+    char command[10], key[100], value[100];
+    while (fscanf(queryFile, "%9[^,],%99[^,],%99[^\n]\n", command, key, value) != EOF) {
         if (strcmp(command, "set") == 0) {
             put(my_kvs, key, value); 
         } else if (strcmp(command, "get") == 0) {
-            char *retrievedValue = get(my_kvs, key); 
+            char *retrievedValue = get(my_kvs, key);
             if (retrievedValue) {
-                fprintf(answerFile, "%s\n", retrievedValue); 
+                fprintf(answerFile, "%s\n", retrievedValue);
             } else {
-                fprintf(answerFile, "-1\n"); 
+                fprintf(answerFile, "-1\n");
             }
         }
     }
-
 
 	kvs_close(my_kvs);
 	fclose(queryFile);

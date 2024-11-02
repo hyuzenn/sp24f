@@ -5,43 +5,37 @@
 
 int main()
 {
+	FILE *queryFile = fopen("query.dat", "r");
+  FILE *answerFile = fopen("answer.dat", "w");
 
-	FILE *fp_query = fopen("query.dat", "r");
-	FILE *fp_answer = fopen("answer.dat", "w");
-
-	if (!fp_query || !fp_answer) {
-		perror("File opening failed");
-		return EXIT_FAILURE;
-	}
-
-	char line[1024];
+	char buffer[1000]; 
 	kvs_t* my_kvs = open_kvs();
 	if (!my_kvs) {
-			fprintf(stderr, "Error: Failed to open KVS\n");
-			return 1; // 프로그램 종료
+			printf("Error: Failed to open KVS. \n");
+			return 1; 
 	}
 
+	    while (fgets(buffer, sizeof(buffer), queryFile)) {
+        char *command = strtok(buffer, ","); 
+        char *key = strtok(NULL, ","); 
+        char *value = strtok(NULL, "\n"); 
 
-	while (fgets(line, sizeof(line), fp_query)) {
-		char *cmd = strtok(line, ",");
-		char *key = strtok(NULL, ",");
-		char *value = strtok(NULL, "\n");
+        if (strcmp(command, "set") == 0) {
+            put(my_kvs, key, value); 
+        } else if (strcmp(command, "get") == 0) {
+            char *retrievedValue = get(my_kvs, key); 
+            if (retrievedValue) {
+                fprintf(answerFile, "%s\n", retrievedValue); 
+            } else {
+                fprintf(answerFile, "-1\n"); 
+            }
+        }
+    }
 
-		if (strcmp(cmd, "set") == 0) {
-			put(my_kvs, key, value);
-		}
-		else if (strcmp(cmd, "get") == 0) {
-			char *found_value = get(my_kvs, key);
-			if (found_value) {
-				fprintf(fp_answer, "%s\n", found_value);
-			} else {
-				fprintf(fp_answer, "-1\n");
-			}
-		}
-	}
+
 	kvs_close(my_kvs);
-	fclose(fp_query);
-	fclose(fp_answer);
+	fclose(queryFile);
+	fclose(answerFile);
 
 	return 0;
 }

@@ -6,13 +6,13 @@
 char* get(kvs_t* kvs, const char* key) {
     // 키가 NULL인지 확인
     if (key == NULL) {
-        fprintf(stderr, "Error: Key is NULL\n");
+        printf("Error: Key is NULL. \n");
         return NULL;
     }
 
     // Skiplist가 초기화되었는지 확인
     if (kvs == NULL || kvs->list == NULL || kvs->list->header == NULL) {
-        fprintf(stderr, "Error: Skiplist is not initialized properly\n");
+        printf("Error: Skiplist is not initialized properly. \n");
         return NULL;
     }
 

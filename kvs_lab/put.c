@@ -7,7 +7,7 @@ int randomLevel();
 
 int put(kvs_t* kvs, const char* key, const char* value) {
     if (kvs == NULL || key == NULL || value == NULL) {
-        fprintf(stderr, "Error: Invalid parameters\n");
+        printf("Error: Invalid parameters. \n");
         return -1; // 잘못된 매개변수 처리
     }
 
@@ -29,7 +29,7 @@ int put(kvs_t* kvs, const char* key, const char* value) {
         free(current->value);
         current->value = strdup(value);
         if (current->value == NULL) {
-            fprintf(stderr, "Error: Memory allocation failed\n");
+            printf("Error: Memory allocation failed. \n");
             return -1; // 메모리 할당 실패 처리
         }
         return 1; // 값 업데이트 성공

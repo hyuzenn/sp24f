@@ -83,21 +83,133 @@ CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/ma
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.s
 
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.o: CMakeFiles/leveldb_bench.dir/flags.make
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.o: /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.o: CMakeFiles/leveldb_bench.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.o -MF CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.o.d -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.o -c /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc > CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.i
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.s
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o: CMakeFiles/leveldb_bench.dir/flags.make
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o: /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o: CMakeFiles/leveldb_bench.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o -MF CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o.d -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o -c /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc > CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.i
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.s
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.o: CMakeFiles/leveldb_bench.dir/flags.make
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.o: /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.o: CMakeFiles/leveldb_bench.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.o -MF CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.o.d -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.o -c /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc > CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.i
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.s
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.o: CMakeFiles/leveldb_bench.dir/flags.make
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.o: /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.o: CMakeFiles/leveldb_bench.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.o -MF CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.o.d -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.o -c /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc > CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.i
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.s
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o: CMakeFiles/leveldb_bench.dir/flags.make
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o: /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o: CMakeFiles/leveldb_bench.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o -MF CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o.d -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o -c /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc > CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.i
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.s
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o: CMakeFiles/leveldb_bench.dir/flags.make
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o: /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o: CMakeFiles/leveldb_bench.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o -MF CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o.d -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o -c /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc > CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.i
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.s
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.o: CMakeFiles/leveldb_bench.dir/flags.make
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.o: /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.o: CMakeFiles/leveldb_bench.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.o -MF CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.o.d -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.o -c /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc > CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.i
+
+CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc -o CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.s
+
 # Object files for target leveldb_bench
 leveldb_bench_OBJECTS = \
-"CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.o"
+"CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.o" \
+"CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.o" \
+"CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o" \
+"CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.o" \
+"CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.o" \
+"CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o" \
+"CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o" \
+"CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.o"
 
 # External object files for target leveldb_bench
 leveldb_bench_EXTERNAL_OBJECTS =
 
-leveldb_bench: CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.o
-leveldb_bench: CMakeFiles/leveldb_bench.dir/build.make
-leveldb_bench: CMakeFiles/leveldb_bench.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable leveldb_bench"
+/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench: CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.o
+/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench: CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.o
+/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench: CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o
+/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench: CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.o
+/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench: CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.o
+/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench: CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o
+/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench: CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o
+/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench: CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.o
+/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench: CMakeFiles/leveldb_bench.dir/build.make
+/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench: CMakeFiles/leveldb_bench.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/leveldb_bench.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/leveldb_bench.dir/build: leveldb_bench
+CMakeFiles/leveldb_bench.dir/build: /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench
 .PHONY : CMakeFiles/leveldb_bench.dir/build
 
 CMakeFiles/leveldb_bench.dir/clean:

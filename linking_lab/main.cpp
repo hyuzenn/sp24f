@@ -1,14 +1,12 @@
 #include <iostream>
-#include "leveldb/include/leveldb/db.h"
-using std::cout;
-using std::cerr;
-using std::endl;
-using std::string;
+#include <leveldb/db.h>
+using namespace std;
 
 int main(){
   leveldb::DB* db;
   leveldb::Options options;
   options.create_if_missing = true;
+
   leveldb::Status status = leveldb::DB::Open(options, "./mydb", &db);
 
   if (!status.ok()){
@@ -16,7 +14,7 @@ int main(){
     return -1;
   }
 
-string key = "yujeong";
+string key = "yujung";
 string value = "Seoul";
 
 status = db->Put(leveldb::WriteOptions(), key, value);

@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench"
-  "/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb_bench.pdb"
   "CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o"
   "CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o.d"
   "CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o"
@@ -17,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o.d"
   "CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.o"
   "CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.o.d"
+  "leveldb_bench"
+  "leveldb_bench.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

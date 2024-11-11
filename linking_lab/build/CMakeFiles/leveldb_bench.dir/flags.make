@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/include -I/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util -I/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/port -I/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db
 
-CXX_FLAGS = -g
+CXX_FLAGS =  -g -std=gnu++11
 

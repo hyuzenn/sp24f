@@ -16,7 +16,7 @@ int main(){
 
 string key = "yujung";
 string value = "Seoul";
-
+ 
 status = db->Put(leveldb::WriteOptions(), key, value);
 if (!status.ok()){
   cerr << "Failed to write key and value" << status.ToString() << endl;

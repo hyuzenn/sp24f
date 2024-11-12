@@ -129,197 +129,29 @@ leveldb_bench/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/build
 .PHONY : leveldb_bench/fast
 
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.o: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.o
+mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.o: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.o
+.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.o
 
 # target to build an object file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.o
+mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.o
+.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.o
 
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.i: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.i
-
-# target to preprocess a source file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.i
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.s: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.s
-
-# target to generate assembly for a file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.cc.s
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.o: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.o
-
-# target to build an object file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.cc.o
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.i: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.i
+mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.i: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.i
+.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.i
 
 # target to preprocess a source file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.cc.i
+mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.i
+.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.i
 
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.s: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.s
-
-# target to generate assembly for a file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.cc.s
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.o: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.o
-
-# target to build an object file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.o
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.i: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.i
-
-# target to preprocess a source file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.i
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.s: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.s
+mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.s: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.s
+.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.s
 
 # target to generate assembly for a file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.cc.s
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.o: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.o
-
-# target to build an object file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.o
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.i: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.i
-
-# target to preprocess a source file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.i
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.s: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.s
-
-# target to generate assembly for a file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.cc.s
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.o: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.o
-
-# target to build an object file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.o
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.i: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.i
-
-# target to preprocess a source file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.i
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.s: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.s
-
-# target to generate assembly for a file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.cc.s
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.o: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.o
-
-# target to build an object file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.o
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.i: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.i
-
-# target to preprocess a source file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.i
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.s: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.s
-
-# target to generate assembly for a file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc.s
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.o: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.o
-
-# target to build an object file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.o
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.i: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.i
-
-# target to preprocess a source file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.i
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.s: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.s
-
-# target to generate assembly for a file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.cc.s
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.o: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.o
-
-# target to build an object file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.o
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.i: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.i
-
-# target to preprocess a source file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.i
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.i
-
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.s: mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.s
-
-# target to generate assembly for a file
-mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.s
-.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.cc.s
+mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leveldb_bench.dir/build.make CMakeFiles/leveldb_bench.dir/mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.s
+.PHONY : mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.cpp.s
 
 # Help Target
 help:
@@ -330,30 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... leveldb_bench"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.o"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.i"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/dbformat.s"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.o"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.i"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/leveldbutil.s"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.o"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.i"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/memtable.s"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.o"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.i"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/db/write_batch.s"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.o"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.i"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/third_party/benchmark/src/string_util.s"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.o"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.i"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.s"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.o"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.i"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/coding.s"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.o"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.i"
-	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/logging.s"
+	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.o"
+	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.i"
+	@echo "... mnt/c/Users/huj22/source/repos/sp24f/linking_lab/main.s"
 .PHONY : help
 
 

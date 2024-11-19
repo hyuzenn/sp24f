@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	serveraddr.sin_addr.s_addr = htonl(INADDR_ANY);
 	serveraddr.sin_port = htons((unsigned short)port);
 
-	if (bind(listenfd, (struct socketaddr*)&serveraddr, sizeof(serveraddr)) == -1 ){
+	if (bind(listenfd, (struct sockaddr*)&serveraddr, sizeof(serveraddr)) == -1) {
 		perror("Failed ro bind. ");
 		return -1;
 	}

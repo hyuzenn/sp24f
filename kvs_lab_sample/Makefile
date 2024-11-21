@@ -1,5 +1,5 @@
 SRCS = main.c
-LIBSRCS = open.c close.c put.c get.c 
+LIBSRCS = open.c close.c put.c get.c do_baseline.c do_custom.c
 TARG = kvs_static
 TARG_DYNAMIC = kvs_dynamic
 

@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<time.h>
 
-#define MAX_LEVEL 16
+#define MAX_LEVEL 8
 
 struct node {
 	char key[100];
@@ -12,24 +12,32 @@ struct node {
 };	
 typedef struct node node_t;
 
+typedef struct {
+    char key[100];  // 키
+    char value[100];  // 값
+} KeyValuePair;
 
 struct kvs{
 	struct node* header; // database
 	int items; // number of data 
 	int kvs_mx_level;
+	
+	KeyValuePair* data;  // 데이터 배열
+  int num_items;       // 저장된 항목 수
 };
 typedef struct kvs kvs_t; 
 
 typedef struct kvs_iterator_t {
     node_t* current; // 현재 순회 중인 노드
+		int level;        // 현재 레벨
 } kvs_iterator_t;
+
 
 kvs_t* kvs_open();
 int kvs_close(kvs_t* kvs); // free all mem alloc
 int put(kvs_t* kvs, const char* key, const char* value); 
 char* get(kvs_t* kvs, const char* key); 
 int rand_lv();
-
 
 int do_snapshot(kvs_t* kvs);
 int do_recovery(kvs_t* kvs);
@@ -38,3 +46,4 @@ kvs_iterator_t* kvs_iterator(kvs_t* kvs);
 int kvs_has_next(kvs_iterator_t* it);
 char* kvs_next_key(kvs_iterator_t* it);
 void kvs_iterator_close(kvs_iterator_t* it);
+node_t* search(node_t* head, const char* key);  

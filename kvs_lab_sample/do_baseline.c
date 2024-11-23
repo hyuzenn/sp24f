@@ -1,12 +1,12 @@
 #include "kvs.h"
 #include <stdio.h>
 #include <unistd.h>
+#define SNAPSHOT_PATH "/mnt/c/Users/huj22/source/repos/sp24f/kvs_lab_sample/kvs.img" 
 
 int do_snapshot(kvs_t* kvs) {
-    const char* filepath = "./kvs.img";  // 현재 디렉토리에 저장
-    FILE* file = fopen(filepath, "w");
+    FILE* file = fopen(SNAPSHOT_PATH, "w");
     if (!file) {
-        printf("Failed to create snapshot file at %s\n", filepath);
+        printf("Failed to create snapshot file at %s\n", SNAPSHOT_PATH);
         return -1;
     }
 
@@ -25,17 +25,15 @@ int do_snapshot(kvs_t* kvs) {
     fsync(fd);  // 디스크에 강제 저장
     fclose(file);
 
-    printf("Snapshot created successfully at %s\n", filepath);
+    printf("Snapshot created successfully at %s\n", SNAPSHOT_PATH);
     return 0;
 }
 
 int do_recovery(kvs_t* kvs) {
     // 복구 파일 경로
-    const char* filepath = "C:\\Users\\huj22\\source\\repos\\sp24f\\kvs_lab_sample\\kvs.img";
-
-    FILE* file = fopen(filepath, "r");
+    FILE* file = fopen(SNAPSHOT_PATH, "rb");
     if (!file) {
-        printf("Snapshot file not found at %s\n", filepath);
+        printf("Snapshot file not found at %s\n", SNAPSHOT_PATH);
         return -1;
     }
 
@@ -45,6 +43,6 @@ int do_recovery(kvs_t* kvs) {
     }
 
     fclose(file);
-    printf("Recovery completed successfully from %s\n", filepath);
+    printf("Recovery completed successfully from %s\n", SNAPSHOT_PATH);
     return 0;
 }

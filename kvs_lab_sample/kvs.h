@@ -20,9 +20,17 @@ struct kvs{
 };
 typedef struct kvs kvs_t; 
 
+typedef struct kvs_iterator_t {
+    node_t* current; // 현재 순회 중인 노드
+} kvs_iterator_t;
 
-kvs_t* open();
-int close(kvs_t* kvs); // free all mem alloc
+kvs_t* kvs_open();
+int kvs_close(kvs_t* kvs); // free all mem alloc
 int put(kvs_t* kvs, const char* key, const char* value); 
 char* get(kvs_t* kvs, const char* key); 
 int rand_lv();
+
+kvs_iterator_t* kvs_iterator(kvs_t* kvs);
+int kvs_has_next(kvs_iterator_t* it);
+char* kvs_next_key(kvs_iterator_t* it);
+void kvs_iterator_close(kvs_iterator_t* it);

@@ -9,7 +9,7 @@ int rand_lv(){ //레벨 난수 생성 함수
     return kvs_mx_level;
 }
 
-kvs_t* open()
+kvs_t* kvs_open()
 {
 	kvs_t* kvs = (kvs_t*) malloc (sizeof(kvs_t));
 	if (!kvs) {

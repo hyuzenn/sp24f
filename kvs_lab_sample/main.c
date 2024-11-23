@@ -2,7 +2,7 @@
 
 int main()
 {
-	kvs_t* kvs = open();
+	kvs_t* kvs = kvs_open();
 
 	if(!kvs) {
 		printf("Failed to open kvs\n");
@@ -14,7 +14,7 @@ int main()
 	
 	if (!queryFile || !answerFile){
 		printf("File not Found\n");
-		close(kvs);
+		kvs_close(kvs);
 		return -1;
 	}
 	printf("Opening Files Successed\n");
@@ -41,13 +41,7 @@ int main()
     fclose(queryFile);
     fclose(answerFile);
 
-	close(kvs);
+	kvs_close(kvs);
 	
 	return 0;
 }
-	// workload execution  
-	
-	// 1) 	file read 
-	// 2) 	if put, insert (key, value) into kvs.
-	// 		if get, seach the key in kvs and return the value. 
-	//		Return -1 if the key is not found  

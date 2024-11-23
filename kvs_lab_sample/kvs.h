@@ -30,6 +30,10 @@ int put(kvs_t* kvs, const char* key, const char* value);
 char* get(kvs_t* kvs, const char* key); 
 int rand_lv();
 
+
+int do_snapshot(kvs_t* kvs);
+int do_recovery(kvs_t* kvs);
+
 kvs_iterator_t* kvs_iterator(kvs_t* kvs);
 int kvs_has_next(kvs_iterator_t* it);
 char* kvs_next_key(kvs_iterator_t* it);

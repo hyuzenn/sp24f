@@ -43,7 +43,7 @@ SNAPSHOT_IMG = kvs.img
 
 # Clean build artifacts
 clean:
-	rm -f $(OBJ) $(TEST_OBJ) $(TARGET) $(TEST_TARGET) kvs.img
+	rm -f $(OBJ) $(TEST_OBJ) $(TARGET) $(TEST_TARGET) kvs.img answer.dat
 
 # Phony targets
 .PHONY: all snapshot_and_recover clean

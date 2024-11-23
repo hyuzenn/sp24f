@@ -54,6 +54,13 @@ int do_recovery(kvs_t* kvs) {
     }
 
     char key[100], value[100];
+    
+    // 입력 버퍼를 지우기
+    while (fgetc(file) != EOF);  // 파일 끝까지 읽어버림
+
+    // 파일 처음으로 돌아가기
+    fseek(file, 0, SEEK_SET);
+
     while (fscanf(file, "%[^,],%s\n", key, value) != EOF) {
         // 복구 파일에서 읽은 데이터를 put 함수로 추가
         put(kvs, key, value);

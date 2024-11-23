@@ -1,41 +1,56 @@
-SRCS = main.c
-LIBSRCS = open.c close.c put.c get.c do_baseline.c do_custom.c
-TARG = kvs_static
-TARG_DYNAMIC = kvs_dynamic
-
+# Compiler and flags
 CC = gcc
-OPTS = -Wall -g
-LIBS = -L. -lkvs -Wl,-rpath=.
+CFLAGS = -Wall -Wextra -g
+LDFLAGS = 
 
-OBJS = $(SRCS:.c=.o)
-LOBJS = $(LIBSRCS:.c=.o)
-LARS = libkvs.a
-SLARS = libkvs.so
+# Targets
+TARGET = kvs
+TEST_TARGET = do_baseline
 
-all: 
-#static
-static: $(TARG)
+# Source files
+SRC = main.c put.c get.c open.c close.c
+HEADERS = kvs.h
+TEST_SRC = do_baseline.c
+DATA_FILE = cluster004.trc
 
-$(TARG) : $(OBJS) $(LARS)
-	$(CC) -o $(TARG) $(OBJS) $(LIBS) -static
+# Object files
+OBJ = $(SRC:.c=.o)
+TEST_OBJ = $(TEST_SRC:.c=.o)
 
-$(LARS) : $(LOBJS)
-	ar rs $(LARS) $(LOBJS)
+# Output files
+SNAPSHOT_IMG = kvs.img
 
-%.o: %.c
-	$(CC) $(OPTS) -c $< -o $@
+# Default target
+all: $(TARGET) $(TEST_TARGET)
 
-#dynamic
-dynamic: $(TARG_DYNAMIC)
-$(TARG_DYNAMIC) : $(OBJS) $(SLARS)
-	$(CC) -o $(TARG_DYNAMIC) $(OBJS) $(LIBS)
-	ldd $(TARG_DYNAMIC)
+# Build KVS executable
+$(TARGET): $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
-$(SLARS) : $(LOBJS)
-	$(CC) -shared -o $(SLARS) $(LIBSRCS)
+# Build test workload generator
+$(TEST_TARGET): $(TEST_OBJ)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
+# Compile object files
+%.o: %.c $(HEADERS)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Run test workload and create snapshot
+snapshot: $(TEST_TARGET) $(TARGET)
+	@echo "Running test workload to prepare in-memory dataset..."
+	./$(TEST_TARGET) $(DATA_FILE)
+	@echo "Creating snapshot using do_snapshot..."
+	./$(TARGET) do_snapshot $(SNAPSHOT_IMG)
+
+# Recovery process
+recover: $(TARGET)
+	@echo "Stopping in-memory KVS..."
+	@echo "Recovering KVS from snapshot..."
+	./$(TARGET) do_recovery $(SNAPSHOT_IMG)
+
+# Clean build artifacts
 clean:
-	rm -f $(OBJS) $(LOBJS) $(LARS) $(SLARS) $(TARG) $(TARG_DYNAMIC)
-	rm answer.dat
+	rm -f $(OBJ) $(TEST_OBJ) $(TARGET) $(TEST_TARGET) $(SNAPSHOT_IMG)
 
-
+# Phony targets
+.PHONY: all snapshot recover clean

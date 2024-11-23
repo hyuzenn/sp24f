@@ -1,5 +1,6 @@
-#include <stdio.h>
 #include "kvs.h"
+#include <stdio.h>
+#include <unistd.h>
 
 int do_snapshot(kvs_t* kvs) {
     const char* filepath = "./kvs.img";  // 현재 디렉토리에 저장

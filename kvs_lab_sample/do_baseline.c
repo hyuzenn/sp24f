@@ -147,6 +147,10 @@ int do_recovery(kvs_t* kvs) {
 
         current = current->next[0];  // 레벨 0으로 이동
     }
+    
+    // 파일 디스크립터를 이용해 fsync 추가
+    int fd = fileno(answerFile);
+    fsync(fd);  // 디스크에 강제 저장
 
     fclose(answerFile);
     return 0;

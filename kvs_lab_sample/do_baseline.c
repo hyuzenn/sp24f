@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#define SNAPSHOT_PATH "/mnt/c/Users/huj22/source/repos/sp24f/kvs_lab_sample/kvs.img" 
+#define SNAPSHOT_PATH "./kvs.img" 
 
 int do_snapshot(kvs_t* kvs) {
     FILE* file = fopen(SNAPSHOT_PATH, "w");

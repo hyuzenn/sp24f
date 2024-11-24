@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define SNAPSHOT_PATH "/mnt/c/Users/huj22/source/repos/sp24f/kvs_lab_sample/kvs.img" 
+#define SNAPSHOT_PATH "./kvs.img" 
 
 int do_snapshot(kvs_t* kvs) {
     const char* filepath = SNAPSHOT_PATH;
@@ -24,22 +24,41 @@ int do_snapshot(kvs_t* kvs) {
         char* key = kvs_next_key(it);
         char* value = get(kvs, key);
         if (key && value) {
+            // snprintf를 이용하여 key와 value를 buffer에 추가
             int len = snprintf(buffer + buffer_len, sizeof(buffer) - buffer_len, "%s,%s\n", key, value);
             buffer_len += len;
 
             if (buffer_len >= sizeof(buffer) - 128) {  // 버퍼가 꽉 차면 쓰기
-                write(fd, buffer, buffer_len);
+                ssize_t written = write(fd, buffer, buffer_len);
+                if (written == -1) {
+                    printf("Write failed at %s\n", filepath);
+                    close(fd);
+                    return -1;
+                }
                 buffer_len = 0;
             }
         }
     }
     kvs_iterator_close(it);
 
+    // 남은 데이터 쓰기
     if (buffer_len > 0) {
-        write(fd, buffer, buffer_len);  // 남은 데이터 쓰기
+        ssize_t written = write(fd, buffer, buffer_len);
+        if (written == -1) {
+            printf("Write failed at %s\n", filepath);
+            close(fd);
+            return -1;
+        }
     }
 
-    fsync(fd);
+    // fsync 호출로 디스크에 강제 저장
+    if (fsync(fd) == -1) {
+        printf("fsync failed at %s\n", filepath);
+        close(fd);
+        return -1;
+    }
+
+    // 파일 닫기
     close(fd);
     printf("Snapshot created successfully at %s\n", filepath);
     return 0;

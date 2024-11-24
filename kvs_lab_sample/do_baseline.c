@@ -131,18 +131,20 @@ int do_recovery(kvs_t* kvs) {
                 break;
             }
         }
+        if (current->value != NULL) {
         for (int i = 0; current->value[i] != '\0'; i++) {
             if ((unsigned char)current->value[i] < 32 || (unsigned char)current->value[i] > 126) {
                 valid = 0;  // 유효하지 않은 문자가 포함됨
                 break;
             }
         }
+        }
 
         // 유효한 데이터만 파일에 기록
         if (valid) {
             fprintf(answerFile, "%s,%s\n", current->key, current->value);
         } else {
-            printf("Skipped invalid key-value pair: %s,%s\n", current->key, current->value);
+            //printf("Skipped invalid key-value pair: %s,%s\n", current->key, current->value);
         }
 
         current = current->next[0];  // 레벨 0으로 이동

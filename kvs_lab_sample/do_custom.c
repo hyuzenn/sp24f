@@ -57,6 +57,9 @@ int do_snapshot(kvs_t* kvs) {
         close(fd);
         return -1;
     }
+    else {
+    printf("Data successfully written to disk using fsync.\n");
+    }
 
     // 파일 닫기
     close(fd);
@@ -193,6 +196,9 @@ int do_recovery(kvs_t* kvs) {
         perror("fsync failed");
         close(answerFile);
         return -1;
+    }
+    else {
+    printf("Data successfully written to disk using fsync.\n");
     }
 
     close(answerFile);

@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define MAX_KEY_LENGTH 100
-#define MAX_VALUE_LENGTH 100
 
 int main()
 {

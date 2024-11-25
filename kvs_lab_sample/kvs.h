@@ -4,6 +4,8 @@
 #include<time.h>
 
 #define MAX_LEVEL 8
+#define MAX_KEY_LENGTH 100
+#define MAX_VALUE_LENGTH 1000
 
 struct node {
 	char key[100];

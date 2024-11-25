@@ -13,31 +13,18 @@ int do_snapshot(kvs_t* kvs) {
     }
 
     kvs_iterator_t* it = kvs_iterator(kvs);
-    if (!it) {
-        printf("Failed to create iterator for kvs\n");
-        fclose(file);
-        return -1;
-    }
-
     while (kvs_has_next(it)) {
         char* key = kvs_next_key(it);
         char* value = get(kvs, key);
         if (key && value) {
-            if (fprintf(file, "%s,%s\n", key, value) < 0) {
-                printf("Failed to write key-value pair to snapshot file\n");
-                kvs_iterator_close(it);
-                fclose(file);
-                return -1;
-            }
+            fprintf(file, "%s,%s\n", key, value);
         }
     }
     kvs_iterator_close(it);
 
     fflush(file);  // 버퍼 내용 플러시
     int fd = fileno(file);  // FILE*에서 파일 디스크립터 가져오기
-    if (fsync(fd) == -1) {
-        printf("Failed to sync snapshot to disk\n");
-    }
+    fsync(fd);  // 디스크에 강제 저장
     fclose(file);
 
     printf("Snapshot created successfully at %s\n", SNAPSHOT_PATH);

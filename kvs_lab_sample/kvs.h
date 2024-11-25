@@ -4,19 +4,19 @@
 #include<time.h>
 
 #define MAX_LEVEL 8
-#define MAX_KEY_LENGTH 100
-#define MAX_VALUE_LENGTH 1000
+#define MAX_KEY_LENGTH 1000
+#define MAX_VALUE_LENGTH 10000
 
 struct node {
-	char key[100];
+	char key[MAX_KEY_LENGTH];
 	char* value;
 	struct node* next[MAX_LEVEL];
 };	
 typedef struct node node_t;
 
 typedef struct {
-    char key[100];  // 키
-    char value[100];  // 값
+    char key[MAX_KEY_LENGTH];  // 키
+    char value[MAX_VALUE_LENGTH];  // 값
 } KeyValuePair;
 
 struct kvs{

@@ -24,7 +24,7 @@ int main()
     printf("Opening Files Successed\n");
 
 		char op[10], key_q[MAX_KEY_LENGTH], value_q[MAX_VALUE_LENGTH];
-		while (fscanf(trcFile, "%9[^,],%99[^,],%99s\n", op, key_q, value_q) != EOF) {
+		while (fscanf(trcFile, "%99[^,],%999[^,],%9999s\n", op, key_q, value_q) != EOF) {
 				if (strcmp(op, "get") == 0) {
 						// get으로 찾은 결과를 answer.dat에 저장
 						char* return_val = get(kvs, key_q);

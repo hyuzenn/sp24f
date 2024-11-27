@@ -1,14 +1,19 @@
 #include "kvs.h"
 #include <stdio.h>
+#include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+
 #define SNAPSHOT_PATH "./kvs.img" 
 
 int do_snapshot(kvs_t* kvs) {
-    FILE* file = fopen(SNAPSHOT_PATH, "w");
-    if (!file) {
-        printf("Failed to create snapshot file at %s\n", SNAPSHOT_PATH);
+    int fd = open(SNAPSHOT_PATH, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+    if (fd == -1) {
+        perror("Failed to create snapshot file");
         return -1;
     }
 
@@ -17,143 +22,77 @@ int do_snapshot(kvs_t* kvs) {
         char* key = kvs_next_key(it);
         char* value = get(kvs, key);
         if (key && value) {
-            fprintf(file, "%s,%s\n", key, value);
+            dprintf(fd, "%s,%s\n", key, value);  // 시스템 호출로 직접 출력
         }
     }
     kvs_iterator_close(it);
 
-    fflush(file);  // 버퍼 내용 플러시
-    int fd = fileno(file);  // FILE*에서 파일 디스크립터 가져오기
-    fsync(fd);  // 디스크에 강제 저장
-    fclose(file);
+    if (fsync(fd) == -1) {
+        perror("Failed to sync file to disk");
+        close(fd);
+        return -1;
+    }
 
+    close(fd);
     printf("Snapshot created successfully at %s\n", SNAPSHOT_PATH);
     return 0;
 }
 
-node_t* search(node_t* head, const char* key) {
-    node_t* current = head;
-    int level = MAX_LEVEL - 1;  // 스킵 리스트의 최고 레벨부터 시작
-
-    while (level >= 0) {
-        // 현재 레벨에서 key보다 작은 노드로 이동
-        while (current->next[level] != NULL && strcmp(current->next[level]->key, key) < 0) {
-            current = current->next[level];  // 해당 레벨에서 다음 노드로 이동
-        }
-        level--;  // 레벨을 하나 낮추기
-    }
-
-    // 가장 낮은 레벨에서 최종적으로 key를 가진 노드를 찾음
-    return current->next[0];  // key를 찾은 후, 해당 노드 반환
-}
-
 int do_recovery(kvs_t* kvs) {
-    // 복구 파일 경로
-    FILE* file = fopen(SNAPSHOT_PATH, "rb");
-    if (!file) {
-        printf("Snapshot file not found at %s\n", SNAPSHOT_PATH);
+    int fd = open(SNAPSHOT_PATH, O_RDONLY);
+    if (fd == -1) {
+        perror("Snapshot file not found");
         return -1;
     }
 
-    // 파일 크기 구하기
-    fseek(file, 0, SEEK_END);
-    long file_size = ftell(file);
-    fseek(file, 0, SEEK_SET);
+    off_t file_size = lseek(fd, 0, SEEK_END);
+    if (file_size == -1) {
+        perror("lseek failed");
+        close(fd);
+        return -1;
+    }
+    lseek(fd, 0, SEEK_SET);
 
-    // 파일 데이터를 저장할 버퍼 할당
-    char* binary_data = (char*)malloc(file_size + 1);  // +1은 NULL 문자 추가 용
+    char* binary_data = (char*)malloc(file_size + 1);
     if (!binary_data) {
-        printf("Memory allocation failed\n");
-        fclose(file);
+        perror("Memory allocation failed");
+        close(fd);
         return -1;
     }
 
-    // 파일 읽기
-    fread(binary_data, sizeof(char), file_size, file);
-    binary_data[file_size] = '\0';  // 끝에 NULL 문자 추가하여 문자열로 만들기
+    ssize_t bytes_read = read(fd, binary_data, file_size);
+    if (bytes_read != file_size) {
+        perror("File read failed");
+        free(binary_data);
+        close(fd);
+        return -1;
+    }
+    binary_data[file_size] = '\0';
+    close(fd);
 
-    fclose(file);
-
-    // 바이너리 데이터를 UTF-8로 처리 (C에서는 문자열로 처리됨)
-    char* line = strtok(binary_data, "\n");  // 줄 단위로 분리
+    char* line = strtok(binary_data, "\n");
     while (line != NULL) {
-        // 트윗 ID와 데이터가 ','로 구분되어 있으면 분리
+        // 개행 문자가 있다면 제거
+        char* line_end = strchr(line, '\n');
+        if (line_end != NULL) {
+            *line_end = '\0';  // 개행 문자 제거
+        }
+
         char* comma_pos = strchr(line, ',');
         if (comma_pos != NULL) {
-            *comma_pos = '\0';  // ',' 위치에 NULL 문자를 넣어 두 부분으로 나눔
+            *comma_pos = '\0';  // key와 value 분리
             char* key = line;
-            char* value = comma_pos + 1;  // ',' 이후의 데이터
+            char* value = comma_pos + 1;
 
-            // 유효성 검사: 키와 값에 유효하지 않은 문자가 포함되어 있으면 건너뛰기
-            int valid = 1;
-            for (int i = 0; key[i] != '\0'; i++) {
-                if ((unsigned char)key[i] < 32 || (unsigned char)key[i] > 126) {
-                    valid = 0;  // 유효하지 않은 문자가 포함됨
-                    break;
-                }
-            }
-            for (int i = 0; value[i] != '\0'; i++) {
-                if ((unsigned char)value[i] < 32 || (unsigned char)value[i] > 126) {
-                    valid = 0;  // 유효하지 않은 문자가 포함됨
-                    break;
-                }
-            }
+            // NULL 문자 설정
+            key[strcspn(key, "\r\n")] = '\0';
+            value[strcspn(value, "\r\n")] = '\0';
 
-            // 유효한 키와 값만 put 함수에 전달
-            if (valid) {
-                put(kvs, key, value);
-            } else {
-                printf("Skipped invalid key-value pair: %s,%s\n", key, value);
-            }
+            put(kvs, key, value);  // 유효성 검사 제거
         }
-
-        line = strtok(NULL, "\n");  // 다음 줄로 이동
+        line = strtok(NULL, "\n");
     }
-
-    free(binary_data);  // 할당한 메모리 해제
+    free(binary_data);
     printf("Recovery completed successfully from %s\n", SNAPSHOT_PATH);
-
-    // answer.dat 파일에 복구된 데이터를 저장
-    FILE* answerFile = fopen("answer.dat", "w");
-    if (!answerFile) {
-        printf("Failed to open answer.dat\n");
-        return -1;
-    }
-
-    // KVS에서 데이터를 읽어 answer.dat에 기록
-    struct node* current = kvs->header;  // KVS의 첫 번째 노드부터 시작
-    while (current != NULL) {
-        // 키와 값이 유효한지 체크하고 파일에 기록
-        int valid = 1;
-        for (int i = 0; current->key[i] != '\0'; i++) {
-            if ((unsigned char)current->key[i] < 32 || (unsigned char)current->key[i] > 126) {
-                valid = 0;  // 유효하지 않은 문자가 포함됨
-                break;
-            }
-        }
-        if (current->value != NULL) {
-        for (int i = 0; current->value[i] != '\0'; i++) {
-            if ((unsigned char)current->value[i] < 32 || (unsigned char)current->value[i] > 126) {
-                valid = 0;  // 유효하지 않은 문자가 포함됨
-                break;
-            }
-        }
-        }
-
-        // 유효한 데이터만 파일에 기록
-        if (valid) {
-            fprintf(answerFile, "%s,%s\n", current->key, current->value);
-        } else {
-            //printf("Skipped invalid key-value pair: %s,%s\n", current->key, current->value);
-        }
-
-        current = current->next[0];  // 레벨 0으로 이동
-    }
-    
-    // 파일 디스크립터를 이용해 fsync 추가
-    int fd = fileno(answerFile);
-    fsync(fd);  // 디스크에 강제 저장
-
-    fclose(answerFile);
     return 0;
 }

@@ -10,17 +10,6 @@
 #define SNAPSHOT_PATH "./kvs.img"
 #define MAX_BUFFER_SIZE 8192  // 버퍼 크기 설정
 
-#include <fcntl.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-#define SNAPSHOT_PATH "./kvs.img"
-#define MAX_BUFFER_SIZE 8192  // 버퍼 크기 설정
-
 int do_snapshot(kvs_t* kvs) {
     int fd = open(SNAPSHOT_PATH, O_WRONLY | O_CREAT | O_TRUNC, 0644);
     if (fd < 0) {

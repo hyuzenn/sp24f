@@ -14,7 +14,7 @@ void sig_int_handler(int sig){
 int main(int argc, void* argv[]){
   pid_t pid[NUM];
   int i, child_status;
-  signal(SIGINT, sig_int_handler);
+  signal(SIGKILL, sig_int_handler);
 
   for(i=0; i < NUM; i++){
     if((pid[i] = fork()) == 0)
@@ -23,7 +23,7 @@ int main(int argc, void* argv[]){
 
   for(i=0; i < NUM; i++) {    
     printf("Killing processes\n");
-    kill(pid[i], SIGINT);
+    kill(pid[i], SIGKILL);
   }
 
   for(i=0; i < NUM; i++){

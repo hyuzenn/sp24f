@@ -19,13 +19,22 @@ void child_handlerl(int sig){
   fprintf(stdout, "Received signal %d from process %d\n", sig, pid);
 }
 
+void child_handler2(int sig){
+  int status;
+  pid_t pid;
+  while((pid = waitpid(-1, &status, WNOHANG)) > 0){
+      ccount --;
+      fprintf(stdout, "Received signal %d from process %d\n", sig, pid);
+  }
+}
+
 int main(int argc, char* argv[]){ 
   pid_t pid[NUM];
   int i, status;
 
   ccount = NUM;
 
-  signal(SIGCHLD, child_handlerl);
+  signal(SIGCHLD, child_handler2);
 
   for (i = 0; i < NUM; i++){
      if((pid[i] = fork()) == 0){

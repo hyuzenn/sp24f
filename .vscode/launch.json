@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/huj22/source/repos/sp24f/opt_lab",
-      "program": "c:/Users/huj22/source/repos/sp24f/opt_lab/build/Debug/outDebug",
+      "cwd": "c:/Users/huj22/source/repos/sp24f",
+      "program": "c:/Users/huj22/source/repos/sp24f/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
